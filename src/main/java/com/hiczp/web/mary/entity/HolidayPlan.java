@@ -31,7 +31,7 @@ public class HolidayPlan {
     @Column
     private Timestamp submitTime;
 
-    @Column
+    @Column(length = 32)
     private String holidayName;
 
     public HolidayPlan() {
