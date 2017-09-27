@@ -60,4 +60,10 @@ public class HomeController {
         modelAndView.setViewName("home/success");
         return modelAndView;
     }
+
+    @GetMapping("/finished")
+    public ModelAndView finished(ModelAndView modelAndView, @Value("${holiday.name}") String holidayName) {
+        modelAndView.setViewName("/home/finished");
+        return modelAndView.addObject("holidayPlanList", holidayPlanRepository.findAllByHolidayNameOrderById(holidayName));
+    }
 }
