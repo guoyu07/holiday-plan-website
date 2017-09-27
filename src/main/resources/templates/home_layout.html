@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>假期去向统计</title>
+
+    <link href="/webjars/bootstrap/3.3.7/dist/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="/css/site.css"
+          th:href="@{/css/site.css}" rel="stylesheet"/>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" th:href="@{/}">假期去向</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/" th:href="@{/}">首页</a></li>
+                <li><a href="/holiday_plan" th:href="@{/holiday_plan}">去向调查</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container frame">
+
+    <div layout:fragment="content">
+        CONTENT
+    </div>
+
+</div>
+
+<script src="/webjars/jquery/3.2.1/dist/jquery.min.js"
+        th:src="@{/webjars/jquery/dist/jquery.min.js}"></script>
+<script src="/webjars/bootstrap/3.3.7/dist/js/bootstrap.min.js"
+        th:src="@{/webjars/bootstrap/dist/js/bootstrap.min.js}"></script>
+
+<th:block layout:fragment="scripts">
+
+</th:block>
+
+</body>
+
+</html>
